@@ -29,7 +29,7 @@ class Xhprof
      * function xhprof_display
      * display the data
      */
-    public function xhprof_display($data, $path = '', $source = 'xhprof', $host = '') {
+    public function xhprof_display($data, $host, $source = 'xhprof') {
         
         include_once("xhprof_lib.php");                                                             
         include_once("xhprof_runs.php");                                                            
