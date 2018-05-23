@@ -1,6 +1,6 @@
 <?php
 
-namespace silly\xhprof;
+namespace artisan\xhprof;
 //
 //  Copyright (c) 2009 Facebook
 //

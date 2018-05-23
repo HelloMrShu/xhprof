@@ -1,6 +1,6 @@
 <?php
 
-namespace silly\xhprof;
+namespace artisan\xhprof;
 
 
 class Xhprof
