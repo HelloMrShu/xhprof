@@ -1,5 +1,5 @@
 {
-    "name": "silly/xhprof",
+    "name": "artisan/xhprof",
     "type": "composer-plugin",
     "license": "MIT",
     "authors": [
@@ -11,7 +11,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "silly\\xhprof\\": "src"
+            "artisan\\xhprof\\": "src"
         }
     }
 
