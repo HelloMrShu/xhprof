@@ -1,5 +1,5 @@
 {
-    "name": "artisan/xhprof",
+    "name": "gartisan/xhprof",
     "type": "composer-plugin",
     "license": "MIT",
     "authors": [
@@ -11,7 +11,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "artisan\\xhprof\\": "src"
+            "gartisan\\xhprof\\": "src"
         }
     }
 
