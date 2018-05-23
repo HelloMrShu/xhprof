@@ -1,6 +1,6 @@
 <?php
 
-namespace artisan\xhprof;
+namespace gartisan\xhprof;
 
 
 class Xhprof
