@@ -1,6 +1,7 @@
 {
     "name": "silly/package",
     "type": "composer-plugin",
+    "keywords": ["php perforrmance xhprof package"],
     "license": "MIT",
     "authors": [
         {
