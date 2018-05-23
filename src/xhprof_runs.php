@@ -1,6 +1,6 @@
 <?php
 
-namespace gartisan\xhprof;
+namespace silly\package;
 //
 //  Copyright (c) 2009 Facebook
 //

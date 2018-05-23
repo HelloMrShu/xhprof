@@ -1,5 +1,5 @@
 {
-    "name": "gartisan/xhprof",
+    "name": "silly/package",
     "type": "composer-plugin",
     "license": "MIT",
     "authors": [
@@ -11,7 +11,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "gartisan\\xhprof\\": "src"
+            "silly\\package\\": "src"
         }
     }
 
