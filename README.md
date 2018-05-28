@@ -7,7 +7,7 @@ PHP code performance plugin
 **Get source code**  
 
 You can get the source code from website [https://github.com/longxinH/xhprof](https://github.com/longxinH/xhprof),
-and follow steps 2 to install on centos 6.5. 
+and install on centos 6.5(my machine). 
 
 ```
 cd xhprof-master/extension/
