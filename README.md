@@ -4,7 +4,8 @@ PHP code performance plugin
 ## configuration
 
 ### 1. Install xhprof
-**1. Get source code**
+**Get source code**  
+
 You can get the source code from website [https://github.com/longxinH/xhprof](https://github.com/longxinH/xhprof),
 and follow steps 2 to install on centos 6.5. 
 
@@ -15,7 +16,7 @@ sudo ./configure --with-php-config=/usr/bin/php-config --enable-xhprof
 sudo make && make install
 ```
 
-**3. Load as php extentsion**
+**Load as php extentsion**   
 
 You will get the path of xhprof.so, for install /usr/lib64/php/modules/xhprof.so after command make install
 open the php.ini file by vim, 
@@ -59,13 +60,14 @@ xhprof.output_dir=/tmp/xhprof
 
 ### 4. How to use the plugin
 
-**1. execute the command below**
+**Execute the command below**    
+
 composer require silly/package dev-master
 then you will find the item in composer.json below require
 
 "silly/package": "dev-master"
 
-**2. Use the Xhprof class in your code**
+**Use the Xhprof class in your code**   
 
 ```
 use silly\package\Xhprof;
@@ -83,7 +85,8 @@ Then will print the url, for instance (http://your_host/index.php?run=5b0c1bf8a8
 just open it in browser, it will show the data in tablelist and click the [View Full Callgraph] link, 
 you will see the function call links. Just care about the links with yellow and red color and optimize them.
 
-**3. Something useful**
+**Something useful**   
+
 Maybe you have some problem like below.
 
 ```
