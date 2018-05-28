@@ -4,11 +4,10 @@ PHP code performance plugin
 ## configuration
 
 ### 1. Install xhprof
-#### 1. Get source code
+**1. Get source code**
 You can get the source code from website [https://github.com/longxinH/xhprof](https://github.com/longxinH/xhprof),
 and follow steps 2 to install on centos 6.5. 
 
-#### 2. Install xhprof
 ```
 cd xhprof-master/extension/
 sudo /usr/bin/phpize
@@ -16,7 +15,7 @@ sudo ./configure --with-php-config=/usr/bin/php-config --enable-xhprof
 sudo make && make install
 ```
 
-#### 3. Load as php extentsion
+**3. Load as php extentsion**
 
 You will get the path of xhprof.so, for install /usr/lib64/php/modules/xhprof.so after command make install
 open the php.ini file by vim, 
@@ -28,6 +27,7 @@ xhprof.output_dir=/tmp/xhprof // this config is used to analyze the xhprof data
 
 sudo service php-fpm restart
 ```
+you can use php -m | grep xhprof or phpinfo to check whether xhprof is install rightly.
 
 ### 2. Config the xhprof-html from nginx visit
 Config the nginx so that you can visit the xhprof data by table and graph.
@@ -53,23 +53,20 @@ Add xhprof.so and output destination file to php.ini
 
 ```
 extension=/usr/lib64/php/modules/xhprof.so
-xhprof.output_dir=/tmp/xhprof //will generate data file in /tmp/xhprof directory
-
+xhprof.output_dir=/tmp/xhprof
 ```
 
-###4. How to use the plugin
 
-####1. execute the command below
-```
+### 4. How to use the plugin
+
+**1. execute the command below**
 composer require silly/package dev-master
-```
 then you will find the item in composer.json below require
 
-```
 "silly/package": "dev-master"
 
-```
-####2. Use the Xhprof class in your code
+**2. Use the Xhprof class in your code**
+
 ```
 use silly\package\Xhprof;
 $xf = new Xhprof();
@@ -85,4 +82,19 @@ $xf->xhprof_display($data, $host);
 Then will print the url, for instance (http://your_host/index.php?run=5b0c1bf8a8875&source=xhprof),
 just open it in browser, it will show the data in tablelist and click the [View Full Callgraph] link, 
 you will see the function call links. Just care about the links with yellow and red color and optimize them.
+
+**3. Something useful**
+Maybe you have some problem like below.
+
+```
+Error: either we can not find profile data for run_id 4d7f0bd99a12f or 
+the threshold 0.01 is too small or you do not have ‘dot’ image 
+generation utility installed
+```
+that's because xhprof draw the png graph, you should upgrate the dot version, just install the graphviz.
+
+```
+sudo yum install -y graphviz
+```
+ please make sure the version of graphviz is ok, mine is graphviz-2.26.0 and the graph can be show right.
 
