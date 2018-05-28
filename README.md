@@ -30,7 +30,7 @@ sudo service php-fpm restart
 ```
 you can use php -m | grep xhprof or phpinfo to check whether xhprof is install rightly.
 
-### 2. Config the xhprof-html from nginx visit
+### 2. Config the xhprof-html for nginx visit
 Config the nginx so that you can visit the xhprof data by table and graph.
 ```
 
@@ -62,10 +62,14 @@ xhprof.output_dir=/tmp/xhprof
 
 **Execute the command below**    
 
+```
 composer require silly/package dev-master
+```
 then you will find the item in composer.json below require
 
+```
 "silly/package": "dev-master"
+```
 
 **Use the Xhprof class in your code**   
 
